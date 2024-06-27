@@ -1,0 +1,23 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true,
+      "package": "Weather Widget",
+      "versionName": "Version 1.2",
+      "versionNumber": "1.2.0.NEXT",
+      "ancestorVersion": "HIGHEST",
+      "versionDescription": ""
+    }
+  ],
+  "name": "weather-widget",
+  "namespace": "cupOfMilk",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "59.0",
+  "packageAliases": {
+    "Weather Widget": "0Hod200000001KHCAY",
+    "Weather Widget@1.0.0-1": "04td20000000GMXAA2",
+    "Weather Widget@1.1.0-1": "04td20000000HFNAA2",
+    "Weather Widget@1.2.0-1": "04td20000000HGzAAM"
+  }
+}

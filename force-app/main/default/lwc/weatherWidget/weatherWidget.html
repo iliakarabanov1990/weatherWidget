@@ -1,0 +1,54 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:invocable_action" size="small" class="slds-m-right_medium"></lightning-icon>
+            Weather Forecast
+        </h3>
+        <header class="slds-page-header header">                        
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-6" >
+                    <label for="city" class="smallFont-x whiteFont">Set city here or in your profile</label>
+                    <lightning-input
+                        id="city"
+                        name="city"
+                        type="search"
+                        value={city}
+                        oncommit={handleCityChange}
+                        variant = "label-hidden"                                                  
+                    ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_4-of-6">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end">            
+                        <div class="slds-col slds-m-right_large">
+                            <img src={mainIcon} />  
+                            <div class="slds-text-align_center">
+                                <span class="mediumFont blackFont ">{whetherDescription}</span>
+                            </div>                      
+                        </div>
+                        <div class="slds-col slds-m-right_large" style="text-align: center;">
+                            <div class="slds-text-color_default largeFont blackFont">{temperature}&deg;C</div>
+                            <div class="baseFont baseFont blackFont">feels like: {feelsLike}&deg;C</div>       
+                            <div class="baseFont baseFont blackFont">wind: {windSpeed} m/s</div>
+                        </div>
+                        <div class="slds-col">                                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </header>
+        <main>
+            <div class="slds-grid slds-gutters">
+                <template for:each={forecastData} for:item="dataItem">
+                    <div class="slds-col" key={dataItem.date} style="min-width: 5vw; text-align: center;">
+                        <div class="baseFont">{dataItem.date}</div>
+                        <div><img src={dataItem.icon} width="50vw" height = "auto"/></div>                       
+                        <div class="smallFont">{dataItem.temp}&deg;C</div>
+                        <div class="smallFont">wind: {dataItem.wind} m/s</div>              
+                    </div>
+                </template>
+            </div>
+        </main>
+    </lightning-card>
+
+</template>

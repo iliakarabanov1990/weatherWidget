@@ -1,0 +1,33 @@
+.largeFont{
+    font-weight: bold; 
+    font-size: 5em;
+}
+
+.mediumFont{
+    font-weight: bolder; 
+    font-size: 3em;
+}
+
+.baseFont{
+    font-size: 2em;
+}
+
+.smallFont{
+    font-size: 1em;
+}
+.smallFont-x{
+    font-size: .7em;
+}
+
+.header{
+    background-image: url('/resource/WeatherImage');
+}
+
+.whiteFont{
+    -webkit-text-fill-color: white;
+    color: white;
+}
+
+.blackFont{
+    color: black;
+}
